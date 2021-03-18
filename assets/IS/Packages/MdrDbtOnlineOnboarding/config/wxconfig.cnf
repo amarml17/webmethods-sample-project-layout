@@ -1,6 +1,0 @@
-wx.config.env.SIT=sit.cnf
-wx.config.env.DEV=dev.cnf
-wx.config.env.UAT=uat.cnf
-wx.config.env.PROD=prod.cnf
-wx.config.env.PRODDC=proddc.cnf
-wx.config.env.PRODDRC=proddrc.cnf
