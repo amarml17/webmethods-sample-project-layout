@@ -1,0 +1,211 @@
+#common config
+JMSConnName=DEFAULT_IS_JMS_CONNECTION
+startBpmQueue=OnlineOnboarding_SUBQUEUE
+datePattern=dd-MM-yyyy hh:mm:ss
+senderDomain=BPM
+senderDomainCrBnk=CoreBanking
+senderDomainDukcapil=Dukcapil
+senderDomainOmni=Omni
+content-type=application/json
+apiKey=[[encrypted:apiKey]]
+channelId=66
+branchNumber=10200				  
+tellerId=BMSAGTLID
+msgType=JSON
+msgSender=OOB
+msgVersion=1.0
+getDukcapilwithPhoto=Y
+sessionRetainDays=7
+processRetainDays=90		 
+sendSMSEmailQueue=OnlineOnboarding_SendSMSEmail_SUBQUEUE
+
+#Check Mobile No in EBS
+checkMobileEBS.ResponseQueue=OnlineOnboarding_VerifyCustomer_REPQUEUE
+checkMobileEBS.jmsTimeout=60000
+checkMobileEBS.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/CoreBankVerifyMobileRgstn/1.0/verifyMobileRgstn
+checkMobileEBS.RetryCount=1
+checkMobileEBS.RetryInterval=1
+checkMobileEBS.Timeout=30000
+checkMobileEBS.MsgSubtype=verifyMobileRgstn
+
+# Send SMS
+sendSMS.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/OmniSendSMS/1.0/sendSMS
+sendSMS.RetryCount=1
+sendSMS.RetryInterval=1
+sendSMS.Timeout=30000
+sendSMS.MsgSubtype=sendSMS
+sendSMS.Channel=MDR-OOB
+sendSMS.Trx=P1
+sendSMS.Message=<OTP bersifat RAHASIA. Kode OTP verifikasi Anda: 
+sendSMS.Message1=>.Jangan berikan OTP pada siapapun, termasuk pihak yang mengatasnamakan Bank Mandiri. Berlaku 5 menit.
+sendSMS.ReminderMessage=You are only a few steps away from opeing an Bank Mandiri Account Online. Use the URL ("https://10.243.211.108:8445/app/") to resume the process. 
+otpCodeRetryCount=21
+# Send SMS Jatis Params
+sendSMS.ProxyAlias=PROXY_MANDIRI
+sendSMS.SuccessResponseCode=00
+sendSMS.FailureResponseCode=11
+sendSMS.FailureMessage=SMS could not be sent.
+sendSMS.JatisTimeout=6000
+sendSMS.UseJatisGw=true
+sendSMS.JatisUserId=rdpsapi
+sendSMS.JatisPassword=[[encrypted:jatispassword]]
+sendSMS.Division=RDPS Group
+sendSMS.Sender=bankmandiri
+sendSMS.UploadBy=omni
+sendSMS.JatisUrl=https://api.jatismobile.com/index.ashx
+sendSMS.BatchName=OTP SMS OOB
+sendSMS.JatisChannel=2
+
+#Send Mail
+sendMail.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/OmniSendMail/1.0/sendMail
+sendMail.RetryCount=1
+sendMail.RetryInterval=1
+sendMail.Timeout=30000
+sendMail.MsgSubtype=sendMail
+sendMail.Message=<!DOCTYPE html><html lang="en"><head>    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">    <meta content="utf-8" http-equiv="encoding">    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,700,700i,800,800i,900,900i" rel="stylesheet">     <!-- <link rel="stylesheet" href="css/styles.css"> --></head><body>        <table style="margin: 20px; min-width: 600px; max-width: 600px; margin-left: auto; margin-right: auto;         background-color:#F8F8F8; border: 2px solid rgb(24, 164, 219); padding: 20px; padding-bottom: 10px">            <tr>                <td>                    <table table-layout: fixed; style="background-color:rgb(255, 255, 255);width: 100%; padding: 15px">                        <tr>                            <td colspan="3"; style="text-align: center">                                <img style="height: auto; width: 40%;margin-top: 60px; margin-bottom: 20px; margin-left: auto; margin-right: auto" src='https://join.bankmandiri.co.id/app/assets/img/img_mandiri/logo_mandiri.png' />                            </td>                        </tr>                        <tr style="margin-left:20%; margin-right: 20%">                            <td>                                <h2 style="margin-bottom: 0px; margin-top: 10px; color: #06387A;                                    font-family: 'Montserrat', sans-serif;                                    font-weight: 600;                                    font-size: 14pt;">Email OTP</h2>                                <p style="color: #06387A; text-align: justify;                                    font-family: 'Montserrat', sans-serif;                                    font-weight: 300;                                    font-size: 10pt;                                    margin: 0;">OTP bersifat RAHASIA. Kode OTP verifikasi Anda: <span id="otptext" style="font-weight: 400;                                    font-size: 12pt; padding-bottom: 10px">
+sendMail.Message1=</span>. Jangan berikan OTP pada siapapun, termasuk pihak yang mengatasnamakan Bank Mandiri. Berlaku 5 menit.</p>                            </td>                        </tr>                    </table>                        <tr style="padding-bottom: 10px; margin-top: 30px; text-align: center;">                        <td style="font-size: 15pt;                            font-family: 'Montserrat', sans-serif;                            font-weight: 700;                            color: #C4C4C4;">                                mandiri                                 <span style="font-size: 15pt;                                    font-family: 'Montserrat', sans-serif;                                    font-weight: 300;                                    text-align: left;                                    color: #C4C4C4;">                                        call 14000                                </span>                              </td>                    </tr>                        <td style="text-align: center">                            <a style="text-decoration: none; font-size: 11pt;                                font-family: 'Montserrat', sans-serif;                                font-weight: 700;                                color: #C4C4C4;"                                href="https://www.bankmandiri.co.id?" target="_blank">                                www.bankmandiri.co.id                            </a>                        </td>                      </tr>                </td>            </tr>        </table></body></html></html>
+sendMail.From=Join Bank Mandiri <no-reply@join.bankmandiri.co.id>
+sendMail.Subject=Verifikasi Kode OTP Pembukaan Mandiri Tabungan
+sendMail.ContentType=text/html
+
+# OTP Code Status JMS COnfig Params
+inputOtpCodeStatus.SubQueue=OnlineOnboarding_OTPCodeStatus_SUBQUEUE
+inputOtpCodeStatus.jmsTimeout=60000
+inputOtpCodeStatus.ReplyQueue=OnlineOnboarding_OTPCodeStatus_REPQUEUE
+
+# Check NIK Dukcapil Config Params
+NIKDukcapil.Url=http://10.243.128.200:19900/dukcapil/get_json/mandiri/call_nik
+NIKDukcapil.Username=MandiriEngine
+NIKDukcapil.Password=[[encrypted:NIKDukcapilPassword]]
+NIKDukcapil.RetryCount=1
+NIKDukcapil.RetryInterval=1
+NIKDukcapil.Timeout=30000
+NIKDukcapil.MsgSubtype=checkNIKDukcapil
+
+# Check NIK Dukcapil DIS Config Params
+NIKDukcapilDIS.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/InquireDukcapilByNIK/1.0/mdr/mendagriconsumer/restful/dukcapil
+NIKDukcapilDIS.RetryCount=1
+NIKDukcapilDIS.RetryInterval=1
+NIKDukcapilDIS.Timeout=30000
+NIKDukcapilDIS.MsgSubtype=checkNIKDukcapilDIS
+NIKDukcapilDIS.transactionSource=mandiri
+NIKDukcapilDIS.Type=Foto
+NIKDukcapilDIS.Username=channeloob
+NIKDukcapilDIS.Password=[[encrypted:NIKDukcapilDISPassword]]
+
+# InputCustomer Data
+inputCustomerData.SubQueue=OnlineOnboarding_CustomerInput_SUBQUEUE
+inputCustomerData.ReplyQueue=OnlineOnboarding_CustomerInput_REPQUEUE
+inputCustomerData.jmsTimeout=60000
+baseSalary=54000000
+
+# Check NIK Dedup
+NIKDedup.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/CoreBankCifInqByNik/1.0/cifInqByNik
+NIKDedup.RetryCount=1
+NIKDedup.RetryInterval=1
+NIKDedup.TranCode=1018
+NIKDedup.MsgSubtype=cifInqByNik
+NIKDedup.Timeout=30000
+
+# Video Call Status
+inputVCallStatus.SubQueue=OnlineOnboarding_VideoCall_SUBQUEUE
+inputVCallStatus.ReplyQueue=OnlineOnboarding_VideoCall_REPQUEUE
+inputVCallStatus.jmsTimeout=60000
+
+# Terms and Conditions Status
+inputTCStatus.SubQueue=OnlineOnboarding_TC_SUBQUEUE
+inputTCStatus.ReplyQueue=OnlineOnboarding_TC_REPQUEUE
+inputTCStatus.jmsTimeout=60000
+
+# F2F Recognition Data
+f2fRecognition.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/PrivyID/1.0/user/facecompare.json
+f2fRecognition.RetryCount=1
+f2fRecognition.RetryInterval=1
+f2fRecognition.Timeout=30000
+f2fRecognition.SubQueue=OnlineOnboarding_F2FRecognition_SUBQUEUE
+f2fRecognition.ReplyQueue=OnlineOnboarding_F2FRecognition_REPQUEUE
+f2fRecognition.jmsTimeout=60000
+
+#KYC Details
+kycDetails.SubQueue=OnlineOnboarding_KYC_SUBQUEUE
+kycDetails.ReplyQueue=OnlineOnboarding_KYC_REPQUEUE
+kycDetails.jmsTimeout=60000
+
+# Privy Common Config
+privy.Username=MANOPAC
+privy.Password=[[encrypted:privyPassword]]
+privy.MerchantKey=AKB3kEQcA4eVTh6cxwyd
+privy.OtpRetryCount=10
+privy.invalidOtpCount=5
+
+# Privy Id Registration & OTP
+privyIdRegOtp.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/OmniDgtlSignRgstn/1.0/dgtlSignRgstn
+privyIdRegOtp.RetryCount=1
+privyIdRegOtp.RetryInterval=1
+privyIdRegOtp.Timeout=30000
+privyIdRegOtp.MsgSubtype=dgtlSignRgstn
+
+# Digital Signature & OTP Validation
+dgtlSign.SubQueue=OnlineOnboarding_Privy_SUBQUEUE
+dgtlSign.ReplyQueue=OnlineOnboarding_Privy_REPQUEUE
+dgtlSign.Timeout=30000
+dgtlSign.jmsTimeout=60000
+dgtlSign.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/OmniDgtlSignReq/1.0/dgtlSignReq
+dgtlSign.RetryCount=1
+dgtlSign.RetryInterval=1
+dgtlSign.MsgSubtype=dgtlSignReq
+
+# Request OTP Details
+reqOtp.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/PrivyID/1.0/user/otprequest.json
+reqOtp.RetryCount=1
+reqOtp.RetryInterval=1
+reqOtp.Timeout=30000
+
+# Change Phone No Privy
+chgPhn.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/PrivyID/1.0/user/changenumber.json
+chgPhn.RetryCount=1
+chgPhn.RetryInterval=1
+chgPhn.Timeout=30000
+
+# Create CIF Account
+createCifAcc.SubQueue=OnlineOnboarding_CreateCIFAccount_SUBQUEUE
+createCifAcc.ReplyQueue=OnlineOnboarding_CreateCIFAccount_REPQUEUE
+createCifAcc.Timeout=60000
+
+# Input MPIN JMS Config
+inputMpin.SubQueue=OnlineOnboarding_GenerateMPin_SUBQUEUE
+inputMpin.ReplyQueue=OnlineOnboarding_GenerateMPin_REPQUEUE
+inputMpin.jmsTimeout=60000
+
+# Register MPIN
+registerMpin.Url=http://soabiruapi.corp.bankmandiri.co.id:4001/gateway/CoreBankCreateMPIN/1.0/createMPIN
+registerMpin.RetryCount=1
+registerMpin.RetryInterval=1
+registerMpin.Timeout=30000
+registerMpin.MsgSubtype=createMpin
+accountType=11
+
+#Report Mail
+reportMail.Subject= Online Onbaording Daily CIF Report - Production
+reportMail.Message=<html><body><br/>Dear All,<br/><br/>Please find the attached CIF report from Online Onbaording for
+reportMail.Message1=<br/><br/>Regards<br/>OOB Support<br/><br/><i>**This is an automated message please do not reply**</i></body></html>
+reportMail.ContentType= text/html
+reportMail.ID=wildan.pratama@bankmandiri.co.id,herryanto@bankmandiri.co.id,jimmy.gunawan@bankmandiri.co.id
+reportMail.fileName=OOBCIFReport
+reportMail.encoding=base64
+reportMail.From=OOB Support <no-reply@join.bankmandiri.co.id>
+
+# Resubmit Step
+resubmitProcess.Url=http://10.254.152.251:5071/invoke/MdrDbtOnlineOnboarding.wrapper/resubmitStep
+resubmitProcess.Username=Administrator
+resubmitProcess.Password=[[encrypted:resubmitUserPwd]]
+		   
+#Support Message Config Params
+supportMail.Message=<html><body><p>Dear Support Team,</p><p>Error in Online Onboarding Process even after 3 retries.</p><p>Please check and reach out to the user</p><br\><p> Error Details -   
+supportMail.Subject=Online Onbaording Process Error - Create CIF Account
+supportMail.Message1=</p><p>Sincerely,</p><p>Team OOB</p><br\><br\></body></html>
+supportMail.ContentType=text/html
+supportMail.ID=roti@softwareag.com,wildan.utomo@bankmandiri.co.id,brando.tampubolon@bankmandiri.co.id
+
+# Stage Details
+stages=START_BPM;1|OTP_CODE_STATUS;2|INPUT_CUST_DATA;3|INPUT_EKTP;4|INPUT_SELFIE;5|INPUT_NPWP;6|INPUT_SIGN;7|INPUT_EFORM;8|VCALL_STATUS;9|INPUT_KYC;10|INPUT_PRIVY_OTP;11|CREATE_CIF_ACCOUNT;12|INPUT_MPIN;13|

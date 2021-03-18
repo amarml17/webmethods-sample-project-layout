@@ -1,0 +1,3331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/stageNo">
+  <COMMENT>--Verify Stage Number--</COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="4" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update Customer Data--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/fullName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/fullName;1;0" CONDITION="%customerData/fullName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/placeOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/placeOfBirth;1;0" CONDITION="%customerData/placeOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/dateOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/dateOfBirth;1;0" CONDITION="%customerData/dateOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/identityAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/identityAddress;1;0" CONDITION="%customerData/identityAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingAddress;1;0" CONDITION="%customerData/livingAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/motherMaidenName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/motherMaidenName;1;0" CONDITION="%customerData/motherMaidenName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/lastEducation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/lastEducation;1;0" CONDITION="%customerData/lastEducation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/occupation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/occupation;1;0" CONDITION="%customerData/occupation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyName;1;0" CONDITION="%customerData/companyName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyAddress;1;0" CONDITION="%customerData/companyAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyPhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyPhone;1;0" CONDITION="%customerData/companyPhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyField;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyField;1;0" CONDITION="%customerData/companyField% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobPosition;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobPosition;1;0" CONDITION="%customerData/jobPosition% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStatus;1;0" CONDITION="%customerData/jobStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/gender;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/gender;1;0" CONDITION="%customerData/gender% !=$null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/bloodGroup;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/bloodGroup;1;0" CONDITION="%customerData/bloodGroup% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/rtrw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/rtrw;1;0" CONDITION="%customerData/rtrw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/maritialStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/maritialStatus;1;0" CONDITION="%customerData/maritialStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdLiving;1;0" CONDITION="%customerData/provinceIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdLiving;1;0" CONDITION="%customerData/cityIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictLiving;1;0" CONDITION="%customerData/subDistrictLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanLiving;1;0" CONDITION="%customerData/kelurahanLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeLiving;1;0" CONDITION="%customerData/postalCodeLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/homePhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/homePhone;1;0" CONDITION="%customerData/homePhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/monthlySalary;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/monthlySalary;1;0" CONDITION="%customerData/monthlySalary% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionId;1;0" CONDITION="%customerData/religionId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDate;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDate;1;0" CONDITION="%customerData/jobStartDate% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdCompany;1;0" CONDITION="%customerData/provinceIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdCompany;1;0" CONDITION="%customerData/cityIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictCompany;1;0" CONDITION="%customerData/subDistrictCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanCompany;1;0" CONDITION="%customerData/kelurahanCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeCompany;1;0" CONDITION="%customerData/postalCodeCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/purposeId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/purposeId;1;0" CONDITION="%customerData/purposeId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/mailDeliveryCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/mailDeliveryCode;1;0" CONDITION="%customerData/mailDeliveryCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/isCorection;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/isCorection;1;0" CONDITION="%customerData/isCorection% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionDescription;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionDescription;1;0" CONDITION="%customerData/religionDescription% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDateString;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDateString;1;0" CONDITION="%customerData/jobStartDateString% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingSameWithIdentity;3.1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingSameWithIdentity;3.1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardInBranch;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardInBranch;1;0" CONDITION="%customerData/cardInBranch% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRT;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRT;1;0" CONDITION="%customerData/companyRT% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRW;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRW;1;0" CONDITION="%customerData/companyRW% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRT;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRT;1;0" CONDITION="%customerData/livingRT% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRW;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRW;1;0" CONDITION="%customerData/livingRW% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/nikBO;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/nikBO;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/fullName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/fullName;1;0" CONDITION="%beneficiaryOwnerData/fullName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/address;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/address;1;0" CONDITION="%beneficiaryOwnerData/address% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/rtrw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/rtrw;1;0" CONDITION="%beneficiaryOwnerData/rtrw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/subDistrict;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/subDistrict;1;0" CONDITION="%beneficiaryOwnerData/subDistrict% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/kelurahan;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/kelurahan;1;0" CONDITION="%beneficiaryOwnerData/kelurahan% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/postalCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/postalCode;1;0" CONDITION="%beneficiaryOwnerData/postalCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/placeOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/placeOfBirth;1;0" CONDITION="%beneficiaryOwnerData/placeOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/dateOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/dateOfBirth;1;0" CONDITION="%beneficiaryOwnerData/dateOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nationality;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nationality;1;0" CONDITION="%beneficiaryOwnerData/nationality% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/gender;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/gender;1;0" CONDITION="%beneficiaryOwnerData/gender% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/maritialStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/maritialStatus;1;0" CONDITION="%beneficiaryOwnerData/maritialStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/sourceOfFunds;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/sourceOfFunds;1;0" CONDITION="%beneficiaryOwnerData/sourceOfFunds% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/occupation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/occupation;1;0" CONDITION="%beneficiaryOwnerData/occupation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyRtRw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyRtRw;1;0" CONDITION="%beneficiaryOwnerData/companyRtRw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companySubDistrict;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companySubDistrict;1;0" CONDITION="%beneficiaryOwnerData/companySubDistrict% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyKelurahan;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyKelurahan;1;0" CONDITION="%beneficiaryOwnerData/companyKelurahan% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPostalCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPostalCode;1;0" CONDITION="%beneficiaryOwnerData/companyPostalCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPhone;1;0" CONDITION="%beneficiaryOwnerData/companyPhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/yearlySalary;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/yearlySalary;1;0" CONDITION="%beneficiaryOwnerData/yearlySalary% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/purposeId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/purposeId;1;0" CONDITION="%beneficiaryOwnerData/purposeId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/relationship;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/relationship;1;0" CONDITION="%beneficiaryOwnerData/relationship% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/createdDateString;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/createdDateString;1;0" CONDITION="%beneficiaryOwnerData/createdDateString% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardAddress;1;0" CONDITION="%customerData/cardAddress% != $null">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="5" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update BO Data--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/fullName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/fullName;1;0" CONDITION="%customerData/fullName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/placeOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/placeOfBirth;1;0" CONDITION="%customerData/placeOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/dateOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/dateOfBirth;1;0" CONDITION="%customerData/dateOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/identityAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/identityAddress;1;0" CONDITION="%customerData/identityAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingAddress;1;0" CONDITION="%customerData/livingAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/motherMaidenName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/motherMaidenName;1;0" CONDITION="%customerData/motherMaidenName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/lastEducation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/lastEducation;1;0" CONDITION="%customerData/lastEducation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/occupation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/occupation;1;0" CONDITION="%customerData/occupation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyName;1;0" CONDITION="%customerData/companyName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyAddress;1;0" CONDITION="%customerData/companyAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyPhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyPhone;1;0" CONDITION="%customerData/companyPhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyField;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyField;1;0" CONDITION="%customerData/companyField% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobPosition;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobPosition;1;0" CONDITION="%customerData/jobPosition% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStatus;1;0" CONDITION="%customerData/jobStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/gender;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/gender;1;0" CONDITION="%customerData/gender% !=$null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/bloodGroup;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/bloodGroup;1;0" CONDITION="%customerData/bloodGroup% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/rtrw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/rtrw;1;0" CONDITION="%customerData/rtrw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/maritialStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/maritialStatus;1;0" CONDITION="%customerData/maritialStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdLiving;1;0" CONDITION="%customerData/provinceIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdLiving;1;0" CONDITION="%customerData/cityIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictLiving;1;0" CONDITION="%customerData/subDistrictLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanLiving;1;0" CONDITION="%customerData/kelurahanLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeLiving;1;0" CONDITION="%customerData/postalCodeLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/homePhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/homePhone;1;0" CONDITION="%customerData/homePhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/monthlySalary;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/monthlySalary;1;0" CONDITION="%customerData/monthlySalary% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionId;1;0" CONDITION="%customerData/religionId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDate;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDate;1;0" CONDITION="%customerData/jobStartDate% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdCompany;1;0" CONDITION="%customerData/provinceIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdCompany;1;0" CONDITION="%customerData/cityIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictCompany;1;0" CONDITION="%customerData/subDistrictCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanCompany;1;0" CONDITION="%customerData/kelurahanCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeCompany;1;0" CONDITION="%customerData/postalCodeCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/purposeId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/purposeId;1;0" CONDITION="%customerData/purposeId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/mailDeliveryCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/mailDeliveryCode;1;0" CONDITION="%customerData/mailDeliveryCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/isCorection;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/isCorection;1;0" CONDITION="%customerData/isCorection% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionDescription;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionDescription;1;0" CONDITION="%customerData/religionDescription% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDateString;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDateString;1;0" CONDITION="%customerData/jobStartDateString% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingSameWithIdentity;3.1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingSameWithIdentity;3.1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardInBranch;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardInBranch;1;0" CONDITION="%customerData/cardInBranch% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRT;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRT;1;0" CONDITION="%customerData/companyRT% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRW;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRW;1;0" CONDITION="%customerData/companyRW% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRT;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRT;1;0" CONDITION="%customerData/livingRT% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRW;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRW;1;0" CONDITION="%customerData/livingRW% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/nikBO;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/nikBO;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/fullName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/fullName;1;0" CONDITION="%beneficiaryOwnerData/fullName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/address;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/address;1;0" CONDITION="%beneficiaryOwnerData/address% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/rtrw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/rtrw;1;0" CONDITION="%beneficiaryOwnerData/rtrw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/subDistrict;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/subDistrict;1;0" CONDITION="%beneficiaryOwnerData/subDistrict% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/kelurahan;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/kelurahan;1;0" CONDITION="%beneficiaryOwnerData/kelurahan% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/postalCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/postalCode;1;0" CONDITION="%beneficiaryOwnerData/postalCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/placeOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/placeOfBirth;1;0" CONDITION="%beneficiaryOwnerData/placeOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/dateOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/dateOfBirth;1;0" CONDITION="%beneficiaryOwnerData/dateOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nationality;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nationality;1;0" CONDITION="%beneficiaryOwnerData/nationality% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/gender;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/gender;1;0" CONDITION="%beneficiaryOwnerData/gender% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/maritialStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/maritialStatus;1;0" CONDITION="%beneficiaryOwnerData/maritialStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/sourceOfFunds;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/sourceOfFunds;1;0" CONDITION="%beneficiaryOwnerData/sourceOfFunds% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/occupation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/occupation;1;0" CONDITION="%beneficiaryOwnerData/occupation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyRtRw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyRtRw;1;0" CONDITION="%beneficiaryOwnerData/companyRtRw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companySubDistrict;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companySubDistrict;1;0" CONDITION="%beneficiaryOwnerData/companySubDistrict% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyKelurahan;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyKelurahan;1;0" CONDITION="%beneficiaryOwnerData/companyKelurahan% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPostalCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPostalCode;1;0" CONDITION="%beneficiaryOwnerData/companyPostalCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPhone;1;0" CONDITION="%beneficiaryOwnerData/companyPhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/yearlySalary;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/yearlySalary;1;0" CONDITION="%beneficiaryOwnerData/yearlySalary% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/purposeId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/purposeId;1;0" CONDITION="%beneficiaryOwnerData/purposeId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/relationship;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/relationship;1;0" CONDITION="%beneficiaryOwnerData/relationship% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/createdDateString;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/createdDateString;1;0" CONDITION="%beneficiaryOwnerData/createdDateString% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardAddress;1;0" CONDITION="%customerData/cardAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nik;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nik;1;0" CONDITION="%beneficiaryOwnerData/nik% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/cityIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/cityIdLiving;1;0" CONDITION="%beneficiaryOwnerData/cityIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/provinceIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/provinceIdLiving;1;0" CONDITION="%beneficiaryOwnerData/provinceIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/jobPosition;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/jobPosition;1;0" CONDITION="%beneficiaryOwnerData/jobPosition% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyField;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyField;1;0" CONDITION="%beneficiaryOwnerData/companyField% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/cityIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/cityIdCompany;1;0" CONDITION="%beneficiaryOwnerData/cityIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/provinceIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/provinceIdCompany;1;0" CONDITION="%beneficiaryOwnerData/provinceIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyName;1;0" CONDITION="%beneficiaryOwnerData/companyName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyAddress;1;0" CONDITION="%beneficiaryOwnerData/companyAddress% != $null">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="6" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update CardAddress--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/fullName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/fullName;1;0" CONDITION="%customerData/fullName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/placeOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/placeOfBirth;1;0" CONDITION="%customerData/placeOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/dateOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/dateOfBirth;1;0" CONDITION="%customerData/dateOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/identityAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/identityAddress;1;0" CONDITION="%customerData/identityAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingAddress;1;0" CONDITION="%customerData/livingAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/motherMaidenName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/motherMaidenName;1;0" CONDITION="%customerData/motherMaidenName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/lastEducation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/lastEducation;1;0" CONDITION="%customerData/lastEducation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/occupation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/occupation;1;0" CONDITION="%customerData/occupation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyName;1;0" CONDITION="%customerData/companyName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyAddress;1;0" CONDITION="%customerData/companyAddress% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyPhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyPhone;1;0" CONDITION="%customerData/companyPhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyField;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyField;1;0" CONDITION="%customerData/companyField% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobPosition;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobPosition;1;0" CONDITION="%customerData/jobPosition% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStatus;1;0" CONDITION="%customerData/jobStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/gender;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/gender;1;0" CONDITION="%customerData/gender% !=$null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/bloodGroup;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/bloodGroup;1;0" CONDITION="%customerData/bloodGroup% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/rtrw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/rtrw;1;0" CONDITION="%customerData/rtrw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/maritialStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/maritialStatus;1;0" CONDITION="%customerData/maritialStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdLiving;1;0" CONDITION="%customerData/provinceIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdLiving;1;0" CONDITION="%customerData/cityIdLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictLiving;1;0" CONDITION="%customerData/subDistrictLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanLiving;1;0" CONDITION="%customerData/kelurahanLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeLiving;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeLiving;1;0" CONDITION="%customerData/postalCodeLiving% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/homePhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/homePhone;1;0" CONDITION="%customerData/homePhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/monthlySalary;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/monthlySalary;1;0" CONDITION="%customerData/monthlySalary% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionId;1;0" CONDITION="%customerData/religionId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDate;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDate;1;0" CONDITION="%customerData/jobStartDate% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/provinceIdCompany;1;0" CONDITION="%customerData/provinceIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cityIdCompany;1;0" CONDITION="%customerData/cityIdCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/subDistrictCompany;1;0" CONDITION="%customerData/subDistrictCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/kelurahanCompany;1;0" CONDITION="%customerData/kelurahanCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeCompany;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/postalCodeCompany;1;0" CONDITION="%customerData/postalCodeCompany% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/purposeId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/purposeId;1;0" CONDITION="%customerData/purposeId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/mailDeliveryCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/mailDeliveryCode;1;0" CONDITION="%customerData/mailDeliveryCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/isCorection;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/isCorection;1;0" CONDITION="%customerData/isCorection% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionDescription;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/religionDescription;1;0" CONDITION="%customerData/religionDescription% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDateString;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/jobStartDateString;1;0" CONDITION="%customerData/jobStartDateString% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingSameWithIdentity;3.1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingSameWithIdentity;3.1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardInBranch;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardInBranch;1;0" CONDITION="%customerData/cardInBranch% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRT;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRT;1;0" CONDITION="%customerData/companyRT% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRW;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/companyRW;1;0" CONDITION="%customerData/companyRW% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRT;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRT;1;0" CONDITION="%customerData/livingRT% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRW;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/livingRW;1;0" CONDITION="%customerData/livingRW% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/nikBO;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/nikBO;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/fullName;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/fullName;1;0" CONDITION="%beneficiaryOwnerData/fullName% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/address;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/address;1;0" CONDITION="%beneficiaryOwnerData/address% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/rtrw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/rtrw;1;0" CONDITION="%beneficiaryOwnerData/rtrw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/subDistrict;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/subDistrict;1;0" CONDITION="%beneficiaryOwnerData/subDistrict% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/kelurahan;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/kelurahan;1;0" CONDITION="%beneficiaryOwnerData/kelurahan% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/postalCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/postalCode;1;0" CONDITION="%beneficiaryOwnerData/postalCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/placeOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/placeOfBirth;1;0" CONDITION="%beneficiaryOwnerData/placeOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/dateOfBirth;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/dateOfBirth;1;0" CONDITION="%beneficiaryOwnerData/dateOfBirth% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nationality;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/nationality;1;0" CONDITION="%beneficiaryOwnerData/nationality% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/gender;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/gender;1;0" CONDITION="%beneficiaryOwnerData/gender% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/maritialStatus;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/maritialStatus;1;0" CONDITION="%beneficiaryOwnerData/maritialStatus% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/sourceOfFunds;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/sourceOfFunds;1;0" CONDITION="%beneficiaryOwnerData/sourceOfFunds% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/occupation;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/occupation;1;0" CONDITION="%beneficiaryOwnerData/occupation% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyRtRw;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyRtRw;1;0" CONDITION="%beneficiaryOwnerData/companyRtRw% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companySubDistrict;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companySubDistrict;1;0" CONDITION="%beneficiaryOwnerData/companySubDistrict% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyKelurahan;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyKelurahan;1;0" CONDITION="%beneficiaryOwnerData/companyKelurahan% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPostalCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPostalCode;1;0" CONDITION="%beneficiaryOwnerData/companyPostalCode% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPhone;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/companyPhone;1;0" CONDITION="%beneficiaryOwnerData/companyPhone% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/yearlySalary;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/yearlySalary;1;0" CONDITION="%beneficiaryOwnerData/yearlySalary% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/purposeId;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/purposeId;1;0" CONDITION="%beneficiaryOwnerData/purposeId% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/relationship;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/relationship;1;0" CONDITION="%beneficiaryOwnerData/relationship% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/createdDateString;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/beneficiaryOwnerData;4;0;MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData/createdDateString;1;0" CONDITION="%beneficiaryOwnerData/createdDateString% != $null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardAddress;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/customerData;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerData/cardAddress;1;0" CONDITION="%customerData/cardAddress% != $null">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="7" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update eKTP Photo--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/customerPhotos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/eKtpPhoto;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/photos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/eKtpPhoto;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="8" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update Selfie Photo--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/customerPhotos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/selfiePhoto;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/photos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/selfiePhoto;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="9" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update NPWP Photo--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/customerPhotos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/npwpPhoto;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/photos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/npwpPhoto;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/customerPhotos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/npwpAvailable;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/photos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/npwpAvailable;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/npwpNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/npwpNo;1;0">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="10" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update Customer Sign--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/customerPhotos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/customerSign;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/photos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/customerSign;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="11" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>--Update eForm PDF--</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>--Map to Global Doc--</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">stageNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">referralCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">npwpNo</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">GlobalDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:GlobalDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerData</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">customerPhotos</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:CustomerPhotos</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">beneficiaryOwnerData</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">MdrDbtOnlineOnboarding.documents.process:BeneficiaryOwnerData</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/customerPhotos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/eFormPdf;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/photos;4;0;MdrDbtOnlineOnboarding.documents.process:CustomerPhotos/eFormPdf;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/stageNo;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/currentStageNo;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/referralCode;1;0" TO="/GlobalDoc;4;0;MdrDbtOnlineOnboarding.documents.process:GlobalDoc/referralCode;1;0">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+</BRANCH>
+</FLOW>

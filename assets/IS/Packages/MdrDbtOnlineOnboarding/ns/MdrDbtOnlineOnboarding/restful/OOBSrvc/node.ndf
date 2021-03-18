@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restResource</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">MdrDbtOnlineOnboarding.restful:OOBSrvc</value>
+  <value name="node_pkg">MdrDbtOnlineOnboarding</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <record name="restResource" javaclass="com.wm.util.Values">
+    <value name="resourceName">OOBSrvc</value>
+    <value name="nsName">MdrDbtOnlineOnboarding.restful:OOBSrvc</value>
+    <array name="operations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">OOBSrvc/resumeProcess</value>
+        <value name="serviceName">MdrDbtOnlineOnboarding.wrapper:resumeProcess</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">OOBSrvc/getProcessStatus</value>
+        <value name="serviceName">MdrDbtOnlineOnboarding.wrapper:getProcessStatus</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">OOBSrvc/suspendProcess</value>
+        <value name="serviceName">MdrDbtOnlineOnboarding.utils:suspendProcess</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">OOBSrvc/retryErrorCifProcess</value>
+        <value name="serviceName">MdrDbtOnlineOnboarding.wrapper:retryErrorCifProcess</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">OOBSrvc/getCifProcessRetryStatus</value>
+        <value name="serviceName">MdrDbtOnlineOnboarding.wrapper:getCifProcessRetryStatus</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">OOBSrvc/sendSMS</value>
+        <value name="serviceName">MdrDbtOnlineOnboarding.utils:sendSMS</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+    </array>
+  </record>
+  <null name="originUri"/>
+  <Boolean name="modifiable">true</Boolean>
+  <value name="assocdoctypename">MdrDbtOnlineOnboarding.restful.OOBSrvc_.docTypes:OOBSrvc</value>
+</Values>
